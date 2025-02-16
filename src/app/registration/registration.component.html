@@ -1,8 +1,10 @@
+<app-navbar></app-navbar>
 <div class="form-container">
+  <h2>Registration form</h2>
     <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
       <div>
-        <label for="fullName">Full Name</label>
-        <input id="fullName" formControlName="fullName" type="text" />
+        <label for="fullName">Full Name:</label>
+        <input id="fullName" formControlName="fullName" type="text"   placeholder="Enter your fullname"/>
         <div *ngIf="registrationForm.get('fullName')?.touched && registrationForm.get('fullName')?.invalid">
           <small *ngIf="registrationForm.get('fullName')?.hasError('required')">Full Name is required.</small>
           <small *ngIf="registrationForm.get('fullName')?.hasError('minlength')">Full Name must be at least 3 characters long.</small>
@@ -10,8 +12,8 @@
       </div>
   
       <div>
-        <label for="email">Email</label>
-        <input id="email" formControlName="email" type="email" />
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email" placeholder="Enter your email"/>
         <div *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid">
           <small *ngIf="registrationForm.get('email')?.hasError('required')">Email is required.</small>
           <small *ngIf="registrationForm.get('email')?.hasError('email')">Invalid email format.</small>
@@ -19,8 +21,8 @@
       </div>
   
       <div>
-        <label for="password">Password</label>
-        <input id="password" formControlName="password" type="password" />
+        <label for="password">Password:</label>
+        <input id="password" formControlName="password" type="password"   placeholder="Enter your password"/>
         <div *ngIf="registrationForm.get('password')?.touched && registrationForm.get('password')?.invalid">
           <small *ngIf="registrationForm.get('password')?.hasError('required')">Password is required.</small>
           <small *ngIf="registrationForm.get('password')?.hasError('minlength')">Password must be at least 6 characters long.</small>
