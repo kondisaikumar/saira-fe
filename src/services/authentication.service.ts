@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root'
 })
 export class AuthenticationService {
-BaseURL = 'http://localhost:8080';
+BaseURL = 'http://localhost:8080/saira';
 registerURL = '/auth/signup'
 loginURL = '/auth/login'
   constructor(private http: HttpClient) { }
